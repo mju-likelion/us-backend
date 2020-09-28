@@ -6,6 +6,10 @@ app_name = 'board'
 
 urlpatterns = [
     path('',views.posts, name='posts'),
+    path('list/',views.postList, name='postList'),
+    path('add/', views.PostView.as_view(), name="login"),
+    path('tip/',views.tipPostList, name='tipPostList'),
+    path('review/',views.reviewPostList, name='reviewPostList'),
     # path("signup/", views.SignupView.as_view(), name="login"),
     # path("token/", obtain_jwt_token),
     # path("token/refresh/", refresh_jwt_token),

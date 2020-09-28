@@ -9,4 +9,5 @@ urlpatterns = [
     path("token/", obtain_jwt_token),
     path("token/refresh/", refresh_jwt_token),
     path("token/verify/", verify_jwt_token),
+    path("userlist/", views.userList.as_view(), name="userlist"),
 ]

@@ -4,6 +4,8 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    # 1 중고거래, 2 물물교환, 3 리뷰, 4 꿀팁  
+    board_type = models.IntegerField(default=0)
     title = models.CharField(max_length=100)
     content = models.TextField()
     image = models.ImageField(upload_to="board/post/%Y/%m/%d")
